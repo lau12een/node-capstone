@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Node Capstone HTML wireframe</title>
+    <link 
+          href="style.css" 
+          rel="stylesheet" 
+          type="text/css" 
+          />
+        <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display|Work+Sans"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+      
+       <!------------Nav Bar  ------------>
+        <ul id="navBar" role="navigation">
+            <li><a role="button" aria-label="dashboard" id="dashboard">Home</a></li>
+            <li><a role="button" aria-label="Account Page" id="account">Accoun Settings</a></li>
+            <li><a role="button" aria-label="logout" id="logOut">Log Out</a></li>
+        </ul>
+        
+        <!------------Nav Bar Ends ---------->
+      
+      <!------Landing Page ------->
+    <main role="main">
+      <header role="banner" class="header">
+        <h1> Teacher's Helper </h1>
+      </header>
+        
+        
+      <section id='landingPage' class='page'>
+          <h2>Behavior Tracking App</h2>
+        <div class="title-bg">
+          <h3>Teacher's Helper is a Behavior Tracking app designed to make tracking problem behaviors for children with special needs efficient and easier. Parents, teachers and specialists may use the app to gain a better understanding of the possible causes of a child's problem behavior.  </h3>
+            <button role="button" aria-label="Submit login details" type="submit" id="login">Login</button>
+            <button role="button" aria-label="Register for an account." type="button" id="register">Sign Up</button>
+        </div>
+        </section>
+        
+        <!------ Registration Page, displays when user doesn't have an account ------>
+        
+        <section id='registrationPage' class='hidden'>
+        <header class="header">
+            <h3>Create an Account</h3>
+        </header>
+        <form aria-label="sign up form" class="hidden" "js-signup-form">
+            <fieldset>
+                <div class='form-row'>
+                    <p> Please fill out sections as accuratley as possible</p>
+                </div>
+                <div class='form-row'>
+                   <label for="username"> Username</label>
+                    <input 
+                           type="text" 
+                           name="username"
+                           placeholder="Username" 
+                           id="js-username-signup">
+                </div>
+                <div class='form-row'>
+                   <label for="first"> First Name:</label>
+                    <input 
+                           type="text" 
+                           placeholder="first name" 
+                           id="first">
+                </div>
+                <div class='form-row'>
+                    <label for="last"> Last Name:</label>
+                    <input 
+                           type="text" 
+                           placeholder="last name" 
+                           id="last">
+                </div>
+                <div class='form-row'>
+                    <label for="email"> Email:</label>
+                    <input 
+                           type="text" 
+                           placeholder="email" 
+                           id="email">
+                </div>
+                <div class='form-row'>
+                    <label for="grade"> Grade:</label>
+                    <input 
+                           type="text" 
+                           placeholder="5th grade" 
+                           id="grade">
+                </div>
+               <div class='form-row'>
+                    <label for="school"> School:</label>
+                    <input 
+                           type="text" 
+                           placeholder="Cadwallader Elementary" 
+                           id="school">
+                </div>
+                <div class='form-row'>
+                    <label for="security"> Security Question 1</label>
+                    <input 
+                           type="text" 
+                           placeholder="Who is your childhood best friend?" 
+                           id="security" size="35">
+                </div>
+                <div class='form-row'>
+                    <label for="security"> Security Answer 1</label>
+                    <input 
+                           type="text" 
+                           placeholder="Mary" 
+                           id="security">
+                </div>
+                <div class='form-row'>
+                    <label for="password">Password:</label>
+                    <input 
+                           type="text" 
+                           placeholder="password" 
+                           id="js-password-signup">
+                </div>
+                <div class='form-row'>
+                    <label for="password2">Repeat Password:</label>
+                    <input 
+                           type="text" 
+                           placeholder="confirm password" 
+                           id="js-password2">
+                </div>
+                <button role="button" aria-label="Create Account" type="submit" id="js-signup-submit">Submit</button>
+            </fieldset>
+        </form>
+      </section>
+        <!------Registration Ends--------> 
+        
+        <!-------LOGIN PAGE, displays once user clicks "login"--------->
+        
+        <section id="loginPage" class="page">
+         <form aria-label="Login Form" id="js-login-form">
+            <h3>Log In</h3>
+             <fieldset>
+            <div class='form-row'>
+              <label for="username">Username</label>
+              <input 
+                     type="text" 
+                     name="username" 
+                     id="js-username-login" />
+            </div>
+            <div class='form-row'>
+              <label for="password">Password</label>
+              <input type="password" 
+                     name="password"
+                     id="js-password-login" />
+            </div>
+            <button role="button" aria-label="Submit login details" type="submit" id="js-login-submit">Log In</button>
+             </fieldset>
+        </form>
+      </section>
+        
+        <!-----------Login Ends ------->
+        
+        <!----------Dashboard, displays when /login request is successful  --------------->
+        
+        <section id="teacherDashboard" class="hidden">
+            <h1>Teacher Dashboard</h1>
+            <h3>Student List</h3>
+                <li><a href="./student1.html">One, Student</a></li>
+            <div id="addStudent">
+                <h2>Add Student:</h2>
+                 <button role="button" aria-label="add student" type="submit" id="js-create-student">Add New Student</button>
+            </div>
+        </section>
+        <!----------Dashboard Ends------------------->
+        
+        <!-----------Add Student Section, displays when teacher wants to add a student --------------->
+        <section id="addStudent" class="hidden">
+              <h2>Add New Student:</h2>
+              <form aria-label="add student form" class="studentForm">
+                  <fieldset>
+                      <div class='form-row'>
+                        <label for="first"> First Name:</label>
+                        <input 
+                               type="text" 
+                               placeholder="first name" 
+                               id="first">
+                      </div>
+                      <div class='form-row'>
+                        <label for="last"> Last Name:</label>
+                        <input 
+                               type="text" 
+                               placeholder="last name" 
+                               id="last">
+                      </div>
+                      <div class='form-row'>
+                        <label for="student-id"> Student id:</label>
+                        <input 
+                               type="text" 
+                               placeholder="ex.993523571" 
+                               id="student-id"
+                               required>
+                      </div>
+                      <div class='form-row'>
+                        <button id="addBehavior">Add Behavior</button>
+                      </div>
+                      <div class='form-row'>
+                          <button id="addBehavior">Add Behavior</button> </div>
+                      <div class='form-row'>
+                            <button id="addBehavior">Add Behavior</button>
+                          </div>
+
+                  <button id="save">Submit</button>
+                  <button  id="cancel">Cancel</button>
+                  </fieldset>
+              </form>
+        </section>
+        <!-------------------Add Student Section Ends ______________>
+        <!-----------------Student Dashboard, ----------------->
+        <section id="student-list" class="hidden">
+            <h2>Student Dashboard</h2>
+            <h3>Student Behavior List</h3>
+                <li>Aggression</li>
+                  <button id="track">Track
+                  </button>
+                  <button id="info">Info
+                  </button>
+                <li>Self Injury</li>
+                  <button id="track">Track
+                  </button>
+                  <button id="info">Info
+                  </button>
+                <li>Elopment</li>
+                    <button id="track">Track
+                  </button>
+                  <button id="info">Info
+                  </button>
+            <br>
+            <br>
+            <button class="review" id="reviewPast">Review Past Data</button>
+            
+            </section>
+    
+      <!--------------------Student Dashboard Ends ------------------>
+      <!----------------------Tracking Form, displays once teacher clicks tracking button ------------------------->
+      <section id="trackingPage" class="hidden">
+        <h2>Track Behavior</h2>
+        <form aria-label="tracking form" class="page" id='trackingForm'>
+            <fieldset>
+                <div class='form-row'>
+                  <label for="behavior name"> Behavior</label>
+                  <input 
+                         type="text" 
+                         placeholder="Aggression" 
+                         id="behaviorName">
+                </div>
+                <div class='form-row'>
+                  <label for="date">Date:</label>
+                  <input 
+                         type="text" 
+                         placeholder="1/19/2019" 
+                         id="date">
+                </div>
+                <div class='form-row'>
+                  <label for="time">Time of Episode:</label>
+                  <input 
+                         type="number"  
+                         placeholder="12:30" 
+                         id="time">
+                </div>
+                <div class='form-row'>
+                  <label for="duration">Duration(min)</label>
+                  <input type="number" placeholder="04:29" id="duration">
+                    <button class="stop">Start
+                    </button>
+                    <button class="stop">Stop
+                    </button>
+                </div>
+              <div class='form-row'>
+                  <label for="frequency">Frequency:</label>
+                  <input 
+                         type="number" 
+                         placeholder="10" 
+                         id="frequency">
+              </div>
+             <div class='form-row'>
+                  <label for="notes">Notes</label>
+                  <input 
+                         class="page" 
+                         type="text" 
+                         placeholder="add notes about incident" 
+                         id="notes" >
+              </div>
+              <button><a href="./student1.html">Submit</a></button>
+            </fieldset>
+      </form>
+    </section>
+        
+        <!----------------Tracking Form Ends ------------------>
+        <!----------------Review Page Starts ------------------>
+        
+    <section id="reviewPage" class="hidden">
+      <h1>This is the review page </h1>
+      <h3>Student One<span class="studentid"> 993523571</span> </h3>
+        <article>
+          <label> Aggression </label>
+          <ul>
+            <li> 1/18/2019</li>
+            <li>1/17/2019</li>
+            <li>1/16/2019</li>
+          </ul>
+        </article>
+        <article>
+          <label> Self Injury </label>
+          <ul>
+            <li> 1/18/2019</li>
+            <li>1/17/2019</li>
+            <li>1/16/2019</li>
+          </ul>
+        </article>
+        <article>
+
+          <label> Elopement </label>
+          <ul>
+            <li> 1/18/2019</li>
+            <li>1/17/2019</li>
+            <li>1/16/2019</li>
+          </ul>
+         </article>
+          <button><a href="./student1.html">Back</a></button> 
+        </section>
+
+        
+        
+    
+        
+    </main>
+    <footer role="content-info">Developed by Laureen Cruz </footer>
+      
+      <!-- Jquery API -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+      
+      <!-- Custom Controller Functions -->
+    <script s,tyep="text/javascript" src="script.js"></script>
+      
+      
+  </body>
+</html>

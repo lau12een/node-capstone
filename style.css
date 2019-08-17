@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    height: 100vh;
+}
+
+body:after {
+    content: "";
+    position: fixed;
+    /* stretch a fixed position to the whole screen */
+    top: 0;
+    height: 100vh;
+    /* fix for mobile browser address bar appearing disappearing */
+    left: 0;
+    right: 0;
+    z-index: -1;
+    /* needed to keep in the background */
+    background: url(website-images/desktop..jpg) center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+/*
+.hidden {
+  display: none 
+}
+*/
+
+
+/* HEADER STYLING */
+
+.header {
+  text-align: center;
+  width: 100%;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  color: #00293c;
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-family: "Playfair Display", serif;
+}
+
+li {
+    list-style: none;
+}
+
+
+button {
+    background-color: #f1f3ce;
+}
+
+.title-bg {
+    background-color: #1E656D;
+    opacity: 0.8;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    padding: 20px;
+    color: white;
+    width: 60%;
+}
+
+section {
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    background-color: #1E656D;
+    opacity: 0.8;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-left: 5px;
+    padding-right: 5px;
+    color: white;
+    padding: 10px;
+}
+
+form {
+    margin-top: 10px;
+    text-align: center;
+}
+
+label,
+input,
+select {
+    display: inline-block;
+    width: 49%;
+    text-align: left;
+    vertical-align: top;
+}
+
+.form-row {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.form-row-button {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+fieldset {
+    border: 0;
+}
+
+/* -------------------- NAVBAR SECTION --------------------*/
+#navBar {
+  margin-bottom: 30px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f1f3ce;
+  list-style-type: none;
+}
+
+#navBar > li {
+  float: left;
+  text-decoration: none;
+}
+
+#navBar > li a {
+  display: block;
+  color: #f62A00;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.25s ease;
+}
+
+#navBar > li a:hover {
+  background-color: #00293c;
+}
